@@ -9,7 +9,7 @@ describe('Sign Up', () => {
     // select the "core" department
     cy.get('select[name="department"]').select('core')
     // select the "git-it" course
-    cy.get('select[name="course"]').select('git-it').should('have.text','asdsa')
+    cy.get('select[name="course"]',{timeout:4000}).select('git-it')
     // submit the form
     cy.get('input[type="submit"]').click()
     // the "Saved!" message should appear
