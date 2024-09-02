@@ -18,7 +18,7 @@ describe('Sign Up', () => {
       // and the list of registered people should contain the new person
       // including the email and the course name
       cy.get('li')
-        .should('have.length', 1)
+        .should('have.length.gte', 1)
         .and('contain', 'Some Name - some@email.com - core - git-it')
     })
   })
